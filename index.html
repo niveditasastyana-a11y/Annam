@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7e7e4">
+<title>For Havvamm ♡</title>
+<style>
+  :root { --paper:#fffaf0; --ink:#514344; --rose:#d88791; --pink:#f4d8d9; --lav:#e5def2; --gold:#d8b56d; }
+  * { box-sizing:border-box; }
+  body { margin:0; color:var(--ink); background:#f7e7e4; font-family: "Trebuchet MS", system-ui, sans-serif; }
+  button { font:inherit; cursor:pointer; }
+  .page { width:min(100%,760px); margin:auto; padding:18px 14px 44px; }
+  .topline { display:flex; justify-content:space-between; align-items:center; gap:10px; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:#916f72; padding:8px 4px 16px; }
+  .music { border:1px solid #d9b9ba; background:#fff8f2; color:#765b5e; padding:9px 12px; border-radius:999px; letter-spacing:0; text-transform:none; }
+  .cover { background:var(--paper); border:1px solid #e8d6c8; border-radius:10px; padding:clamp(20px,5vw,42px); box-shadow:0 12px 35px #9c6d6d18; position:relative; overflow:hidden; }
+  .cover:before { content:""; position:absolute; inset:10px; border:1px dashed #d9b8a7; border-radius:5px; pointer-events:none; }
+  .eyebrow { text-align:center; font-size:.75rem; letter-spacing:.2em; color:#a46f78; text-transform:uppercase; }
+  h1 { font-family: Georgia, serif; font-weight:normal; text-align:center; font-size:clamp(2.6rem,10vw,5rem); line-height:1; margin:15px 0 12px; color:#b96e7b; }
+  .subtitle { text-align:center; line-height:1.7; max-width:430px; margin:0 auto; }
+  .collage { display:grid; grid-template-columns:1fr 1.08fr 1fr; align-items:center; gap:9px; max-width:490px; margin:27px auto 25px; }
+  .polaroid { background:white; padding:8px 8px 25px; box-shadow:0 4px 12px #6d4b4b20; transform:rotate(-5deg); }
+  .polaroid:nth-child(2) { transform:rotate(3deg) translateY(-10px); }
+  .polaroid:nth-child(3) { transform:rotate(6deg); }
+  .art { display:grid; place-items:center; min-height:100px; aspect-ratio: .9; background:#f5dadd; font-size:clamp(2.2rem,8vw,3.5rem); }
+  .polaroid:nth-child(2) .art { background:#e7e0f2; }
+  .polaroid:nth-child(3) .art { background:#f7e9c8; }
+  .caption { text-align:center; font-family:Georgia,serif; font-size:.78rem; padding-top:7px; }
+  .btn { border:0; background:#bc7480; color:white; padding:13px 20px; border-radius:999px; box-shadow:0 4px 0 #945b65; transition:transform .15s; }
+  .btn:active { transform:translateY(3px); box-shadow:0 1px 0 #945b65; }
+  .center { text-align:center; margin-top:22px; }
+  .section { background:#fffaf0; border-radius:10px; border:1px solid #e8d6c8; margin-top:16px; padding:clamp(20px,5vw,34px); box-shadow:0 8px 24px #9c6d6d10; }
+  .section h2 { font-family:Georgia,serif; font-size:clamp(1.7rem,6vw,2.3rem); font-weight:normal; color:#a96774; margin:0 0 14px; }
+  .section p { line-height:1.8; }
+  .tape { display:inline-block; background:#ead5a6; padding:5px 14px; transform:rotate(-2deg); font-size:.78rem; margin-bottom:15px; }
+  .letter { white-space:pre-line; }
+  .cake-wrap { text-align:center; padding:8px 0 4px; }
+  .cake { font-size:6rem; filter:drop-shadow(0 5px 0 #ead3ca); animation:bob 2.4s ease-in-out infinite; }
+  @keyframes bob { 50% { transform:translateY(-5px) rotate(2deg); } }
+  .wish { color:#a96774; min-height:28px; font-family:Georgia,serif; font-size:1.1rem; }
+  .envelopes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .env { background:#f5e4e5; border:1px solid #e2c7c9; color:#805e62; padding:17px 9px; border-radius:8px; min-height:104px; }
+  .env:nth-child(2) { background:#eae4f3; border-color:#d5cbe5; }
+  .env:nth-child(3) { background:#f8edcf; border-color:#e9d9a9; }
+  .env:nth-child(4) { background:#e0ece4; border-color:#c5d9ca; }
+  .env span { display:block; font-size:1.7rem; margin-bottom:6px; }
+  .message { background:#fff; border-left:3px solid #d88791; padding:14px 16px; margin-top:14px; line-height:1.75; border-radius:0 7px 7px 0; }
+  .footer { text-align:center; color:#916f72; font-size:.82rem; line-height:1.8; padding:26px 8px 0; }
+  .tiny { font-size:.82rem; color:#8c7474; }
+  .hidden { display:none; }
+  .spark { position:fixed; pointer-events:none; z-index:9; animation:float 1.8s ease-out forwards; font-size:22px; }
+  @keyframes float { from { opacity:1; transform:translateY(0) scale(.7) rotate(0); } to { opacity:0; transform:translateY(-170px) scale(1.4) rotate(35deg); } }
+  @media(max-width:420px) { .collage { gap:6px; } .polaroid { padding:5px 5px 19px; } .caption { font-size:.68rem; } .art { min-height:83px; } .topline { letter-spacing:.07em; } }
+  @media(prefers-reduced-motion:reduce) { *,*:before,*:after { animation:none !important; transition:none !important; } }
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="topline"><span>✿ a tiny scrapbook for you</span><button class="music" id="musicBtn" aria-pressed="false">♫ Play our little tune</button></div>
+  <section class="cover">
+    <div class="eyebrow">made with love · from far away</div>
+    <h1>Happy Birthday,<br>Havvamm ♡</h1>
+    <p class="subtitle">Even if there are miles between us, I hope this little corner of the internet makes you feel a little closer to me today.</p>
+    <div class="collage" aria-label="A little scrapbook collage">
+      <div class="polaroid"><div class="art">🌷</div><div class="caption">little joys</div></div>
+      <div class="polaroid"><div class="art">💌</div><div class="caption">big love</div></div>
+      <div class="polaroid"><div class="art">🧸</div><div class="caption">always us</div></div>
+    </div>
+    <div class="center"><button class="btn" id="openBtn">Open your little surprise ↓</button></div>
+  </section>
+
+  <section class="section" id="letter">
+    <span class="tape">A little letter from me to you</span>
+    <h2>Dear Havvamm,</h2>
+    <p class="letter" id="letterText">Happy birthday, Havvammm. ♡
+
+If I could be there…
+I would show up with Udang Keju and Kentang Mustofa, your favorite hehe, give you the biggest hug, and probably talk to you all day. Since I can't do that from here, I made you this tiny place on the internet instead, i just learn how to make it soo sorry if it's not really good wakakakk. Anyway ...
+
+Happy birthday, Havvamm. ♡
+
+I hope this new year of your life brings you gentle days, ridiculous laughter, good people who show up for you, and little reasons to feel proud of yourself. I hope you remember that you deserve the same love and kindness you give to everyone else.
+
+Even with all these miles between us, I'm still cheering for you. I'm grateful that this world somehow let our paths cross. Thank you for being you, for the memories we've made, and for all the ones we haven't made yet.
+
+Whenever life feels too big, remember there's someone far away who is always rooting for you. If I can't be beside you today, let this page be a tiny hug until I can.
+
+I love you lots. Just in case you forget that ♡ Tbh ... i still need google translate and GPT to tell my feelings because i can't really describe it in really fine words, but i always know you always understand what i'm trying to say hehehe. And i'm sorry for the bad song, i couldn't figure it out how to changed it in the prompt bruhh. 
+
+And I always hope you happy ... that's all that matter to me. Alright this text have limits soo... wkwkwkwk. Once again Happy birthdayy Havvamm.
+♡♡♡</p>
+    <p class="tiny">P.S. Keep going — there are tiny surprises below. ♡</p>
+  </section>
+
+  <section class="section" id="cakeSection">
+    <span class="tape">make a wish!</span>
+    <h2>A tiny cake for your big day 🎂</h2>
+    <p>Close your eyes, make a wish, and tap the cake to blow out your imaginary candles. Your wish is safe with the universe.</p>
+    <div class="cake-wrap"><button id="cakeBtn" class="cake" aria-label="Make a birthday wish">🎂</button><div class="wish" id="wishText">Tap your cake, birthday girl ✨</div></div>
+    <div class="center"><button class="btn" id="confettiBtn">Send you a shower of love ✨</button></div>
+  </section>
+
+  <section class="section" id="envelopeSection">
+    <span class="tape">open whenever you need</span>
+    <h2>Little letters for later ✉️</h2>
+    <p>Pick an envelope. Each one is a small reminder from me, for whatever kind of day you're having.</p>
+    <div class="envelopes">
+      <button class="env" data-title="Open when you miss me" data-message="I miss you too, I'm giving you the longest, warmest hug. Distance is just the space between our locations — it doesn't erase the care between us, and i miss Mesir Macunu that once you gave me, just wait till i got there rightt, . ♡"><span>💌</span>When you miss me</button>
+      <button class="env" data-title="Open when you're sad" data-message="You don't have to be okay every second. Take a breath, drink some water, and give yourself a little treat and the same kindness you'd give someone you love. You have made it through hard days before, and you don't have to figure everything out all at once. Don't forget to rest hehehe. 🌷"><span>🌷</span>When you're sad</button>
+      <button class="env" data-title="Open when you need a laugh" data-message="Official birthday announcement: You are now one year more iconic. Side effects may include to destroy the world or killing somebody and a little dramatic main-character moments, and being loved by me forever. No refunds. 😭🎂"><span>🧸</span>When you need a laugh</button>
+      <button class="env" data-title="Open when you forget your worth" data-message="In case your brain is being mean to you today. you are valuable even when you're tired, lovable even when you're quiet, and worthy of good things without having to earn every single one. I hope you see even a little of the wonderful person I see. ♡"><span>⭐</span>When you need a reminder</button>
+    </div>
+    <div class="message hidden" id="envelopeMessage" role="status" aria-live="polite"><strong id="messageTitle"></strong><div id="messageBody"></div></div>
+  </section>
+
+  <section class="section" style="text-align:center">
+    <span class="tape">one last thing</span>
+    <h2>Across every mile ♡</h2>
+    <p>If I could wrap up a feeling and send it across the world, it would be this: I'm so glad you exist, Havvamm. I hope we get to make more memories together, and until then, here's a little reminder that someone far away is wishing you the happiest birthday.</p>
+    <button class="btn" id="finalBtn">One more hug? 🫂</button>
+    <p class="wish" id="finalText" aria-live="polite"></p>
+  </section>
+  <footer class="footer">assembled from tiny pixels & lots of love ♡<br><span class="tiny">No distance can stop a birthday wish.</span></footer>
+</main>
+<script>
+  // A gentle, original tone made with Web Audio. No audio files or downloads needed.
+  let audioCtx = null, musicTimer = null, noteIndex = 0, musicOn = false;
+  const notes = [523.25, 659.25, 783.99, 659.25, 587.33, 698.46, 880, 698.46];
+  function playNote(freq, duration=0.25) {
+    if (!audioCtx) return;
+    const osc = audioCtx.createOscillator(), gain = audioCtx.createGain();
+    osc.type = "sine"; osc.frequency.value = freq;
+    gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.075, audioCtx.currentTime + 0.025);
+    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+    osc.connect(gain); gain.connect(audioCtx.destination);
+    osc.start(); osc.stop(audioCtx.currentTime + duration + 0.03);
+  }
+  function toggleMusic() {
+    const btn = document.getElementById("musicBtn");
+    if (!musicOn) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) { btn.textContent = "Music isn't supported here ♡"; return; }
+      audioCtx = audioCtx || new AudioContextClass();
+      if (audioCtx.state === "suspended") audioCtx.resume();
+      playNote(notes[noteIndex++ % notes.length], .3);
+      musicTimer = setInterval(() => playNote(notes[noteIndex++ % notes.length], .3), 360);
+      musicOn = true; btn.textContent = "♫ Pause our little tune"; btn.setAttribute("aria-pressed","true");
+    } else {
+      clearInterval(musicTimer); musicTimer = null; musicOn = false;
+      btn.textContent = "♫ Play our little tune"; btn.setAttribute("aria-pressed","false");
+    }
+  }
+  document.getElementById("musicBtn").addEventListener("click", toggleMusic);
+  document.getElementById("openBtn").addEventListener("click", () => document.getElementById("letter").scrollIntoView({behavior:"smooth"}));
+  function burst(count=18) {
+    const icons = ["💗","✨","💕","🌸","♡","⭐"];
+    for (let i=0;i<count;i++) {
+      const el = document.createElement("span"); el.className="spark";
+      el.textContent=icons[Math.floor(Math.random()*icons.length)];
+      el.style.left=(Math.random()*94+3)+"vw"; el.style.top=(Math.random()*70+15)+"vh";
+      el.style.animationDelay=(Math.random()*.45)+"s";
+      document.body.appendChild(el); setTimeout(()=>el.remove(),2400);
+    }
+  }
+  document.getElementById("cakeBtn").addEventListener("click", () => {
+    document.getElementById("wishText").textContent="Wish sent! May something lovely find you this year. ♡";
+    burst(24);
+  });
+  document.getElementById("confettiBtn").addEventListener("click", () => burst(32));
+  document.querySelectorAll(".env").forEach(btn => btn.addEventListener("click", () => {
+    document.getElementById("messageTitle").textContent=btn.dataset.title;
+    document.getElementById("messageBody").textContent=btn.dataset.message;
+    const box=document.getElementById("envelopeMessage"); box.classList.remove("hidden");
+    box.scrollIntoView({behavior:"smooth",block:"nearest"});
+    burst(8);
+  }));
+  document.getElementById("finalBtn").addEventListener("click", () => {
+    document.getElementById("finalText").textContent="HUG DELIVERED! Imagine me squeezing you very, very tight. ♡";
+    burst(28);
+  });
+</script>
+</body>
+</html>
